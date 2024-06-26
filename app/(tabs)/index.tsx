@@ -21,6 +21,8 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">{t("home.welcome")}</ThemedText>
         <HelloWave />
+      </ThemedView>
+      <ThemedView>
         <Language />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
