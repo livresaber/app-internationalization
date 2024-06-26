@@ -19,6 +19,7 @@ const flags = [
 
 export function Language() {
   const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   useEffect(() => {
     const loadLanguage = async () => {
@@ -40,7 +41,15 @@ export function Language() {
       <ThemedText style={styles.text}>Language</ThemedText>
       <View style={styles.flags}>
         {flags.map(({ component: Flag, lang, name }) => (
-          <TouchableOpacity key={name} onPress={() => changeLanguage(lang)} style={styles.flag}>
+          <TouchableOpacity
+            key={name}
+            onPress={() => changeLanguage(lang)}
+            style={[
+              styles.flag,
+              currentLanguage === lang && styles.activeFlag,
+              currentLanguage !== lang && styles.inactiveFlag,
+            ]}
+          >
             <Flag width={50} height={50} />
           </TouchableOpacity>
         ))}
@@ -59,6 +68,12 @@ const styles = StyleSheet.create({
   },
   flag: {
     paddingRight: 20,
+  },
+  activeFlag: {
+    transform: [{ scale: 1.2 }],
+  },
+  inactiveFlag: {
+    opacity: 0.5,
   },
   text: {
     fontSize: 28,
