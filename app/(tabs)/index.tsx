@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform } from "react-native";
+import { Image, StyleSheet } from "react-native";
 
 import { HelloWave } from "@/components/HelloWave";
 import { Language } from "@/components/Language";
@@ -23,9 +23,6 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">{t("home.welcome")}</ThemedText>
         <HelloWave />
-      </ThemedView>
-      <ThemedView>
-        <Language />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">
@@ -66,6 +63,9 @@ export default function HomeScreen() {
           </ExternalLink>
         </ThemedText>
       </ThemedView>
+      <ThemedView>
+        <Language />
+      </ThemedView>
     </ParallaxScrollView>
   );
 }
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     width: 290,
     bottom: 0,
     left: 0,
-    position: 'absolute',
+    position: "absolute",
   },
   link: {
     textDecorationLine: "underline",

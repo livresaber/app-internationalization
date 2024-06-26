@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   flags: {
     flexDirection: "row",
-    paddingVertical: 20,
+    padding: 10,
   },
   flag: {
     paddingRight: 20,
