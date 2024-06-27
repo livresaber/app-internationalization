@@ -1,6 +1,7 @@
 {
   "language": "语言",
   "home": {
+    "title": "开始",
     "welcome": "欢迎",
     "subtitle": "i18n示例应用！",
     "description": "这是一个使用react-i18next实现国际化（i18n）的React Native示例应用。该应用允许用户在不同语言之间切换，以提供更本地化的体验。",

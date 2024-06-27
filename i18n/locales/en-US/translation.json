@@ -1,6 +1,7 @@
 {
   "language": "Language",
   "home": {
+    "title": "Home",
     "welcome": "Welcome",
     "subtitle": "Example i18n App!",
     "description": "This is an example React Native application demonstrating how to implement internationalization (i18n) using react-i18next. The app allows users to switch between different languages for a more localized experience.",

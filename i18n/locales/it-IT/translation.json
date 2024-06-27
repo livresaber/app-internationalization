@@ -1,6 +1,7 @@
 {
   "language": "Lingua",
   "home": {
+    "title": "Inizio",
     "welcome": "Benvenuto",
     "subtitle": "Applicazione esempio di i18n!",
     "description": "Questa è un'applicazione di esempio in React Native che dimostra come implementare l'internazionalizzazione (i18n) utilizzando react-i18next. L'applicazione consente agli utenti di passare tra diverse lingue per un'esperienza più localizzata.",
