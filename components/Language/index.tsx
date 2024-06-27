@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { StyleSheet, View, TouchableOpacity } from "react-native";
+import { StyleSheet, View, ScrollView, TouchableOpacity } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ThemedText } from "@/components/ThemedText";
 import { useTranslation } from "react-i18next";
@@ -8,6 +8,8 @@ import USA from "./flags/USA";
 import Russian from "./flags/Russian";
 import China from "./flags/China";
 import Spain from "./flags/Spain";
+import Italy from "./flags/Italy";
+import India from "./flags/India";
 
 const flags = [
   { component: Brasil, lang: "pt-BR", name: "Brasil" },
@@ -15,10 +17,12 @@ const flags = [
   { component: Russian, lang: "ru-RU", name: "Russia" },
   { component: China, lang: "zh-CN", name: "China" },
   { component: Spain, lang: "es-ES", name: "Spain" },
+  { component: Italy, lang: "it-IT", name: "Italy" },
+  { component: India, lang: "hi-IN", name: "India" },
 ];
 
 export function Language() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const currentLanguage = i18n.language;
 
   useEffect(() => {
@@ -38,8 +42,12 @@ export function Language() {
 
   return (
     <View style={styles.container}>
-      <ThemedText style={styles.text}>Language</ThemedText>
-      <View style={styles.flags}>
+      <ThemedText style={styles.text}>{t('language')}</ThemedText>
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.flagsContainer}
+      >
         {flags.map(({ component: Flag, lang, name }) => (
           <TouchableOpacity
             key={name}
@@ -50,10 +58,10 @@ export function Language() {
               currentLanguage !== lang && styles.inactiveFlag,
             ]}
           >
-            <Flag width={50} height={50} />
+            <Flag width={45} height={45} />
           </TouchableOpacity>
         ))}
-      </View>
+      </ScrollView>
     </View>
   );
 }
@@ -62,9 +70,9 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
   },
-  flags: {
+  flagsContainer: {
     flexDirection: "row",
-    padding: 10,
+    paddingVertical: 10,
   },
   flag: {
     paddingRight: 20,
@@ -76,7 +84,7 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
   text: {
-    fontSize: 28,
+    fontSize: 22,
     lineHeight: 32,
     marginTop: -6,
   },
