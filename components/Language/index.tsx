@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   flag: {
-    paddingRight: 20,
+    paddingHorizontal: 10,
   },
   activeFlag: {
     transform: [{ scale: 1.2 }],
