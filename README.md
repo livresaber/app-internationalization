@@ -1,5 +1,6 @@
 # app-internationalization
 This is an example React Native application that demonstrates how to implement internationalization (i18n) using `react-i18next`. The app allows users to switch between different languages by clicking on corresponding country flags, and it persists the selected language locally for a consistent user experience across app restarts.
+For more details, check out the article on [Dev.to](https://dev.to/lucasferreiralimax/i18n-in-react-native-with-expo-2j0j).
 
 ## Features
 
