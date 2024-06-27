@@ -1,5 +1,34 @@
 {
-    "home": {
-        "welcome": "Welcome!"
+  "language": "Language",
+  "home": {
+    "welcome": "Welcome",
+    "subtitle": "Example i18n App!",
+    "description": "This is an example React Native application demonstrating how to implement internationalization (i18n) using react-i18next. The app allows users to switch between different languages for a more localized experience.",
+    "exploringLanguages": "Exploring Languages",
+    "exploringLanguagesDescription": "Click on country flags to explore the app's content in different languages.",
+    "learnMore": "Want to Learn More?",
+    "repositoryLinkText": "Project repository on GitHub",
+    "articlesLinkText": "More articles"
+  },
+  "features": {
+    "title": "Features",
+    "collapsibles": {
+      "i18n": {
+        "title": "Internationalization with i18next",
+        "description": "Uses react-i18next for language management, allowing the app to be localized for different languages."
+      },
+      "persistent": {
+        "title": "Persistent Language Selection",
+        "description": "Uses AsyncStorage to persistently store the user's preferred language, providing a consistent experience across app restarts."
+      },
+      "fallback": {
+        "title": "Language Fallback",
+        "description": "Defaults to the device's language if no language preference is saved."
+      },
+      "switching": {
+        "title": "Easy Language Switching",
+        "description": "Users can switch languages by tapping on country flags."
+      }
     }
+  }
 }
