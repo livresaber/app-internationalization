@@ -4,19 +4,21 @@ import * as Localization from "expo-localization";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import translationEn from "./locales/en-US/translation.json";
 import translationPt from "./locales/pt-BR/translation.json";
-// import translationRu from "./locales/ru-RU/translation.json";
-// import translationZh from "./locales/zh-CN/translation.json";
-// import translationEs from "./locales/es-ES/translation.json";
+import translationRu from "./locales/ru-RU/translation.json";
+import translationZh from "./locales/zh-CN/translation.json";
+import translationEs from "./locales/es-ES/translation.json";
+import translationIt from "./locales/it-IT/translation.json";
+import translationHi from "./locales/hi-IN/translation.json";
 
 // Configuração das traduções
 const resources = {
   "pt-BR": { translation: translationPt },
   "en-US": { translation: translationEn },
-  //   "ru-RU": { translation: translationRu },
-  //   "zh-CN": { translation: translationZh },
-  //   "fr-FR": { translation: translationFr },
-  //   "it-IT": { translation: translationIt },
-  //   "hi-IN": { translation: translationHi },
+  "es-ES": { translation: translationEs },
+  "ru-RU": { translation: translationRu },
+  "zh-CN": { translation: translationZh },
+  "it-IT": { translation: translationIt },
+  "hi-IN": { translation: translationHi },
 };
 
 const initI18n = async () => {
