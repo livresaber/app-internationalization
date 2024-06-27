@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { StyleSheet } from "react-native";
 import { useTranslation } from "react-i18next";
@@ -7,9 +8,15 @@ import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { Language } from "@/components/Language";
+import { useNavigation } from "@react-navigation/native";
 
 export default function TabTwoScreen() {
   const { t } = useTranslation();
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    navigation.setOptions({ title: t("features.title") });
+  }, [navigation, t]);
 
   return (
     <ParallaxScrollView

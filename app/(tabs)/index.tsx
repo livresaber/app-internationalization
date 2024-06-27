@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Image, StyleSheet } from "react-native";
 import { useTranslation } from "react-i18next";
 import { HelloWave } from "@/components/HelloWave";
@@ -7,9 +7,15 @@ import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { ExternalLink } from "@/components/ExternalLink";
+import { useNavigation } from "@react-navigation/native";
 
 export default function HomeScreen() {
   const { t } = useTranslation();
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    navigation.setOptions({ title: t("home.title") });
+  }, [navigation, t]);
 
   return (
     <ParallaxScrollView
