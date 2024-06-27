@@ -4,13 +4,13 @@ For more details, check out the article on [Dev.to](https://dev.to/lucasferreira
 
 ## Screenshots
 <a href="https://dev.to/lucasferreiralimax/i18n-in-react-native-with-expo-2j0j" target="_blank">
-  <img alt="App screenshot portuguese" width="320px" src="https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsjh0bg3c9kk5fv1zkwc0.jpeg" />
+  <img alt="App screenshot portuguese" width="300px" src="https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsjh0bg3c9kk5fv1zkwc0.jpeg" />
 </a>
 <a href="https://dev.to/lucasferreiralimax/i18n-in-react-native-with-expo-2j0j" target="_blank">
-  <img alt="App screenshot chinese" width="320px" src="https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy66pc6xfxx19x2u7g9a1.jpeg" />
+  <img alt="App screenshot chinese" width="300px" src="https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy66pc6xfxx19x2u7g9a1.jpeg" />
 </a>
 <a href="https://dev.to/lucasferreiralimax/i18n-in-react-native-with-expo-2j0j" target="_blank">
-  <img alt="App screenshot english" width="320px" src="https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ff15xe575a2fmanjjeb9y.jpeg" />
+  <img alt="App screenshot english" width="300px" src="https://media.dev.to/cdn-cgi/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ff15xe575a2fmanjjeb9y.jpeg" />
 </a>
 
 ## Features
