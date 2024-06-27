@@ -1,5 +1,6 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { StyleSheet } from "react-native";
+import { useTranslation } from "react-i18next";
 
 import { Collapsible } from "@/components/Collapsible";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
@@ -8,6 +9,8 @@ import { ThemedView } from "@/components/ThemedView";
 import { Language } from "@/components/Language";
 
 export default function TabTwoScreen() {
+  const { t } = useTranslation();
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
@@ -16,31 +19,26 @@ export default function TabTwoScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Features</ThemedText>
+        <ThemedText type="title">{t("features.title")}</ThemedText>
       </ThemedView>
-      <ThemedText>
-        This app includes example code to help you get started.
-      </ThemedText>
-      <Collapsible title="Internationalization with i18next">
+      <Collapsible title={t("features.collapsibles.i18n.title")}>
         <ThemedText>
-          Leverages react-i18next for seamless language management, allowing the
-          app to be localized for different languages.
+          {t("features.collapsibles.i18n.description")}
         </ThemedText>
       </Collapsible>
-      <Collapsible title="Persistent Language Selection">
+      <Collapsible title={t("features.collapsibles.persistent.title")}>
         <ThemedText>
-          Uses AsyncStorage to persistently store the user's preferred language,
-          providing a consistent experience across app restarts.
+          {t("features.collapsibles.persistent.description")}
         </ThemedText>
       </Collapsible>
-      <Collapsible title="Locale Fallback">
+      <Collapsible title={t("features.collapsibles.fallback.title")}>
         <ThemedText>
-          Defaults to the device's locale if no language preference is saved.
+          {t("features.collapsibles.fallback.description")}
         </ThemedText>
       </Collapsible>
-      <Collapsible title="Easy Language Switching">
+      <Collapsible title={t("features.collapsibles.switching.title")}>
         <ThemedText>
-          Users can switch languages by tapping on country flags.
+          {t("features.collapsibles.switching.description")}
         </ThemedText>
       </Collapsible>
       <ThemedView>

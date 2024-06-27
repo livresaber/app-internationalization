@@ -1,15 +1,16 @@
+import React from "react";
 import { Image, StyleSheet } from "react-native";
-
+import { useTranslation } from "react-i18next";
 import { HelloWave } from "@/components/HelloWave";
 import { Language } from "@/components/Language";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { useTranslation } from "react-i18next";
 import { ExternalLink } from "@/components/ExternalLink";
 
 export default function HomeScreen() {
   const { t } = useTranslation();
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
@@ -25,27 +26,17 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">
-          Welcome to the i18n Example App!
-        </ThemedText>
-        <ThemedText>
-          This is an example React Native application that demonstrates how to
-          implement internationalization (i18n) using react-i18next. The app
-          allows users to switch between different languages for a more
-          localized experience.
-        </ThemedText>
+        <ThemedText type="subtitle">{t("home.subtitle")}</ThemedText>
+        <ThemedText>{t("home.description")}</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Exploring Languages</ThemedText>
-        <ThemedText>
-          Click on the country flags to explore the app's content in different
-          languages.
-        </ThemedText>
+        <ThemedText type="subtitle">{t("home.exploringLanguages")}</ThemedText>
+        <ThemedText>{t("home.exploringLanguagesDescription")}</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Want to Learn More?</ThemedText>
+        <ThemedText type="subtitle">{t("home.learnMore")}</ThemedText>
         <ThemedText>
-          The project repository on GitHub:{" "}
+          {t("home.repositoryLinkText")}:{" "}
           <ExternalLink
             style={styles.link}
             href="https://github.com/livresaber/app-internationalization"
@@ -54,12 +45,20 @@ export default function HomeScreen() {
           </ExternalLink>
         </ThemedText>
         <ThemedText>
-          More articles:{" "}
+          {t("home.articlesLinkText")}:{" "}
           <ExternalLink
             style={styles.link}
             href="https://dev.to/lucasferreiralimax"
           >
             dev.to/lucasferreiralimax
+          </ExternalLink>
+        </ThemedText>
+        <ThemedText>
+          <ExternalLink
+            style={styles.link}
+            href="https://www.linkedin.com/in/lucasferreiralimax"
+          >
+            linkedin.com/in/lucasferreiralimax
           </ExternalLink>
         </ThemedText>
       </ThemedView>
@@ -89,6 +88,5 @@ const styles = StyleSheet.create({
   },
   link: {
     textDecorationLine: "underline",
-    backgroundColor: "red",
   },
 });
